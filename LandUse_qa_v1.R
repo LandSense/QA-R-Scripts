@@ -39,7 +39,7 @@ LandUse_qa_v1=function(In, Out, a, n, s){ # arguments: In = Input data, Out = Ou
   fd <- LocationOfThisScript()
   
   
-  print(paste0('working dir ', fd))
+  #print(paste0('working dir ', fd))
   source(paste(fd, 'ScottsPi_v1.R', sep="/")) # Scotts Pi, https://en.wikipedia.org/wiki/Fleiss%27_kappa # worked example
   source(paste(fd, 'fun_accuracy_stratified.R', sep="/")) # accuracy Card 1982
 
