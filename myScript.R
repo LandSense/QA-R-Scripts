@@ -1,2 +1,2 @@
-myInfo = Sys.info()
-cat(myInfo, "\n")
+myInfo = R.version.string
+cat(myInfo)
