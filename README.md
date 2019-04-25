@@ -11,6 +11,10 @@ Modular R Scripts for running QA analysis within QA platform or independently
 2d. LS_INO_QA_v1.R # InoSens
 2e. LS_BLI_QA_v1.R # Bird life international
 
+2f. LC_CDS_MK_v1.R # Make Change Detector Service reference data for interpreation (currently Landsat time series trajectories)
+2g. LC_CDS_QA_v1.R # Change Detector Service (relies on reference data collected through LC_CDS_MK_v1.R) 
+
+
 'generic functions' called from 'QA test'
 3a. ScottsPi_v1.R # calculates contributor agreement see D5.2 and D5.4; (HEI, IGN, UBA)
 3b. fun_accuracy_stratified.R # calculates categorical accuracy (thematic accuracy) see D5.2 and D5.4 (HEI, IGN, UBA, BLI)
