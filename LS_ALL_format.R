@@ -4,6 +4,8 @@
 # out: data formated pilto specific QA 
 # 25.04.2019, michael.schultz@uni-heidelberg.de
 
+# add fomat identification
+
 LacoFormat <- function(In, Out, pt, nl, se){ # arguments: In = Input folder, Out = Output folder, pt = pattern (eg. *.zip) of downloaded data, nl = redundancy depth if 0 or 1 than no redundancy (needs implementation), s = sampling population 
   
   # get files
