@@ -1,14 +1,18 @@
 # data downloaded as Validation.zip
+# purpose: formats data downloaded from laco-wiki
+# in: geojson output from laco-wiki (requiers currently reformating downloaded zip shp to geojson)
+# out: statistics and graphs of accuracys and agreement 
+# 23.04.2019, michael.schultz@uni-heidelberg.de
 
-LacoFormat <- function(df, pt, af, nl, se){
+LacoFormat <- function(In, Out, pt, nl, se){ # arguments: In = Input folder, Out = Output folder, pt = pattern (eg. *.zip) of downloaded data, nl = redundancy depth if 0 or 1 than no redundancy (needs implementation), s = sampling population 
   
   # get files
-  setwd(df) # location of downloads
+  setwd(In) # location of downloads
   dl <- list.files(pattern = glob2rx(pt)) # select relevant files
-  file.copy(dl, af) # copy files to workspace
+  file.copy(dl, Out) # copy files to workspace
   
   # extract/rename files
-  setwd(af)
+  setwd(Out)
   dl <- list.files(pattern = glob2rx(pt)) # select relevant files
   
   for (i in 1:length(dl)){
