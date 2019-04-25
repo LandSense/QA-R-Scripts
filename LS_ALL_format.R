@@ -1,3 +1,13 @@
+
+
+
+# create table based data frames, one value one entry
+
+
+
+
+
+
 # purpose: formats data downloaded from laco-wiki and other LandSense pilot data sources
 # in: geojson output from laco-wiki (requiers currently reformating downloaded zip shp to geojson)
 # in: ADD other formats

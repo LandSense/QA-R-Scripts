@@ -1,0 +1,1 @@
+# purpose: calculates descriptive stats on GPS accuracy and delta on GPS points and polygon

@@ -1,4 +1,4 @@
-# purpose: calculates standard accuracy measures (Congalton 1991) considering true marginal map proportions (Card 1982) and user agreement (Scotts Pi) 
+# purpose: calculates  categorical accuracy and contributor agreement # Geneva version
 # in: geojson output from laco-wiki (requiers currently reformating downloaded zip shp to geojson)
 # out: statistics and graphs of accuracys and agreement 
 # 05.11.2018, michael.schultz@uni-heidelberg.de
@@ -42,7 +42,7 @@ LandUse_qa_v1=function(In, Out, a, n, s){ # arguments: In = Input data, Out = Ou
   #print(paste0('working dir ', fd))
   source(paste(fd, 'ScottsPi_v1.R', sep="/")) # Scotts Pi, https://en.wikipedia.org/wiki/Fleiss%27_kappa # worked example
   source(paste(fd, 'fun_accuracy_stratified.R', sep="/")) # accuracy Card 1982
-
+  
   # /home/michi/Dropbox/LandSense_QA/LandUse_qa/in/ /home/michi/Dropbox/LandSense_QA/LandUse_qa/out/ GENEVA 5 150
   
   #In <- '/home/michi/Dropbox/LandSense_QA/LandUse_qa/in/'

@@ -1,0 +1,1 @@
+# purpose: calculates categorical accuracy

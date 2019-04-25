@@ -1,0 +1,1 @@
+# purpose: calculates descriptive statss on GPS delta and location accuracy contributor agreement # Geneva version 
