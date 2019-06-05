@@ -61,7 +61,7 @@ LS3a_ContributorAgreement_IGN_v8=function(d, s, n, h, f){ # arguments: In = dir 
   print("location: ")
   print(fd)
   
-  x = c('rgdal', 'reshape2', 'ggplot2', 'raster', 'rgeos', 'maptools', 'foreign','stringr','readr','jsonlite') # list of libraries
+  x = c('rgdal', 'reshape2', 'ggplot2', 'raster', 'rgeos', 'maptools', 'foreign','jsonlite') # list of libraries
   lapply(x, library, character.only = T); rm(x) # load libraries and clean
   #source(paste0(fd, 'ScottsPi_v1.R')) # Scotts Pi, https://en.wikipedia.org/wiki/Fleiss%27_kappa # worked example
   
