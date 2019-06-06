@@ -18,7 +18,7 @@ LocationOfThisScript = function() # Function LocationOfThisScript returns the lo
   cmd.args = commandArgs(trailingOnly = FALSE)
   cmd.args.trailing = commandArgs(trailingOnly = TRUE)
   cmd.args = cmd.args[seq.int(from=1, length.out=length(cmd.args) - length(cmd.args.trailing))]
-  res = gsub("^(?:--file=(.*)|.*)$", "\\1", cmd.args)
+  res = gsub("^(?:--file=(.*)|.*)$", "//1", cmd.args)
   
   # If multiple --file arguments are given, R uses the last one
   res = tail(res[res != ""], 1)
@@ -58,9 +58,7 @@ LS3a_ContributorAgreement_IGN_v8=function(d, s, n, h, f){ # arguments: In = dir 
   # dependencies
   #fd = '/home/michi/Dropbox/R/' # functions home, fixed on the server
   fd <- LocationOfThisScript() # this isn't necessary if this and the ScottsPI script were in an R package
-  print("location: ")
-  print(fd)
-  
+
   x = c('rgdal', 'reshape2', 'ggplot2', 'raster', 'rgeos', 'maptools', 'foreign','jsonlite') # list of libraries
   lapply(x, library, character.only = T); rm(x) # load libraries and clean
   #source(paste0(fd, 'ScottsPi_v1.R')) # Scotts Pi, https://en.wikipedia.org/wiki/Fleiss%27_kappa # worked example
@@ -83,8 +81,8 @@ LS3a_ContributorAgreement_IGN_v8=function(d, s, n, h, f){ # arguments: In = dir 
   
   # calculate Scots Pi and format
   co = as.data.frame(cbind(x$userval_1, x$userval_2)) # format for scots PI
-  print("Scotts PI")
   si = ScottsPi(co, as.numeric(p[3])) # scots PI calculation
+  
   x = as.data.frame(cbind(si, x$datavalue, x$userval_1, x$sampleid)) # combine ScottsPi, map response, majority vote reference, id
   colnames(x) = c('s', 'm', 'r', 'sampleid') # colnames: ScottsPi, map response,  majority reference, id
   cc = 0; cv = 0;  # dummy to append category character and category value
@@ -129,7 +127,7 @@ LS3a_ContributorAgreement_IGN_v8=function(d, s, n, h, f){ # arguments: In = dir 
 args = commandArgs(T) 
 d = as.character(args[1])
 s = as.character(args[2]); 
-n = as.character(args[2]); 
+n = as.character(args[3]); 
 h = as.character(args[4])
 f = as.character(args[5])
 
