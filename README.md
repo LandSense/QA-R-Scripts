@@ -1,6 +1,20 @@
 QA-R-Scripts
 Modular R Scripts for running QA analysis within QA platform or independently
 
+Dependency installer for installing the R packages:
+
+       pkgTest <- function(x) {
+          if (x %in% rownames(installed.packages()) == F) { # does package exist
+            install.packages(x, dependencies = T, repos='http://cran.us.r-project.org') #
+          }
+          require(x, character.only = T) # regulate functions input
+        }
+        neededPackages <- c('rgdal', 'reshape2', 'ggplot2', 'raster', 'rgeos', 'maptools', 'foreign', 'spatialEco')
+        for (package in neededPackages) { # check for each package
+          pkgTest(package) # install package if missing
+        }
+
+
 'format data' for specific QA test
 1. LS_ALL_format.R # identifies formats of LandSense pilot data and reformats to QA sepecific data frames
 
@@ -22,3 +36,5 @@ Modular R Scripts for running QA analysis within QA platform or independently
 3c. LS_deltaGPS.R # calculates offset of points guided vs captured (UBA)
 3d. LS_deltaPOLY.R # calculates offset of polygons and related points (INO)
 3e. LS_avgGPS.R # calculates descriptive statistics about captured points GPS accuracy (INO, UBA)
+
+
